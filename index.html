@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="module" src="index.js" defer></script>
+    <link rel="stylesheet" href="./css/utility.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <title>Pixabay Gallery</title>
+  </head>
+  <body>
+    <header class="header flex culomn">
+      <div>
+        <img src="./assets/images/logo.png" alt="logo" class="logo" />
+      </div>
+
+      <section class="search-section flex culomn align-center justify-center">
+        <h1 class="search-h1">Pixabay</h1>
+        <h4 class="search-h4">
+          Discover Your Favorite Image from Our Beautiful Collection!
+        </h4>
+        <form id="search-form" class="search-box flex">
+          <button type="submit" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+          <input type="text" id="search-input" placeholder="Search images..." />
+        </form>
+      </section>
+    </header>
+  </body>
+</html>
