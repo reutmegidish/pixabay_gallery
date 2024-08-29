@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL } from '../../config.js'
+import { API_KEY, BASE_URL } from '../../config/config.js'
 
 const fetchImages = async function (query) {
   const url = `${BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(
