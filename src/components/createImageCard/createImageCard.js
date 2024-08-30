@@ -1,3 +1,4 @@
+import handleModal from '../../handlers/handleModal.js'
 import generateImgCardUI from './generateImgCardUI.js'
 
 function createImageCard(images) {
@@ -7,6 +8,7 @@ function createImageCard(images) {
 
   imagesContainer.innerHTML = ''
   imagesContainer.insertAdjacentHTML('afterbegin', imagesCards)
-  return
+
+  handleModal(images)
 }
 export default createImageCard
