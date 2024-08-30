@@ -29,8 +29,6 @@ const fetchImages = async function (query) {
       })
     )
 
-    console.log(images)
-
     return images
   } catch (err) {
     console.error('Error fetching images:', err)
