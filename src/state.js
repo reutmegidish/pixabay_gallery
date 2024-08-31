@@ -1,10 +1,15 @@
 export const state = {
   currentPage: 0,
   currentQuery: '',
+  selectedTag: '',
+  selectedTag: '',
 }
 
 export function initPageState() {
   state.currentPage = 1
+}
+export function initSelectedTag() {
+  state.selectedTag = ''
 }
 
 export function incrementPageState() {
@@ -15,10 +20,18 @@ export function updateCurrentQueryState(query) {
   state.currentQuery = query
 }
 
+export function updateSelectedTagState(tag) {
+  state.selectedTag = tag
+}
+
 export function getPageState() {
   return state.currentPage
 }
 
 export function getCurrentQuery() {
   return state.currentQuery
+}
+
+export function getSelectedTag() {
+  return state.selectedTag
 }

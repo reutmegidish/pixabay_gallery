@@ -7,6 +7,21 @@ function createImageCard(images) {
   const imagesContainer = document.querySelector('.cards-container')
   const moreImgBtn = document.querySelector('.more-img-btn')
 
+  if (images.length === 0) {
+    if (page === 1) {
+      imagesContainer.innerHTML = ''
+      imagesContainer.innerHTML = '<p>No images found.</p>'
+    } else {
+      imagesContainer.insertAdjacentHTML(
+        'beforeend',
+        '<p>No more images available.</p>'
+      )
+    }
+
+    moreImgBtn.classList.add('hidden')
+    return
+  }
+
   const imagesCards = images.map((image) => generateImgCardUI(image)).join('')
 
   if (page === 1) {
