@@ -1,5 +1,5 @@
-import { handleSearch } from './handlers/searchHandlers.js'
+import handleSubmit from './handlers/handleSubmit.js'
 
 const searchForm = document.getElementById('search-form')
 
-searchForm.addEventListener('submit', handleSearch)
+searchForm.addEventListener('submit', handleSubmit)
