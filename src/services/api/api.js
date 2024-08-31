@@ -1,9 +1,13 @@
 import { API_KEY, BASE_URL } from '../../config/config.js'
+import { getCurrentQuery, getPageState } from '../../state.js'
 
-const fetchImages = async function (query) {
+const fetchImages = async function (perPage = 20) {
+  const query = getCurrentQuery()
+  const currentPage = getPageState()
+
   const url = `${BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(
     query
-  )}&image_type=photo&pretty=true`
+  )}&page=${currentPage}&per_page=${perPage}&image_type=photo`
 
   try {
     const res = await fetch(url)
