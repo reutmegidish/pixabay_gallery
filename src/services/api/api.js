@@ -1,13 +1,14 @@
 import { API_KEY, BASE_URL } from '../../config/config.js'
-import { getCurrentQuery, getPageState } from '../../state.js'
+import { getCurrentQuery, getPageState, getSelectedTag } from '../../state.js'
 
 const fetchImages = async function (perPage = 20) {
   const query = getCurrentQuery()
   const currentPage = getPageState()
+  const tag = getSelectedTag()
 
   const url = `${BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(
     query
-  )}&page=${currentPage}&per_page=${perPage}&image_type=photo`
+  )}&page=${currentPage}&per_page=${perPage}&image_type=photo&category=${tag}`
 
   try {
     const res = await fetch(url)

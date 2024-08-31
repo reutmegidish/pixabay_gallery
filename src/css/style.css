@@ -197,3 +197,22 @@ h4 {
   text-align: center;
   cursor: pointer;
 }
+
+.more-img-btn {
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.more-img-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
