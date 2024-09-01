@@ -3,6 +3,7 @@ export const state = {
   currentQuery: '',
   selectedTag: '',
   selectedTag: '',
+  imagesData: [],
 }
 
 export function initPageState() {
@@ -12,6 +13,9 @@ export function initSelectedTag() {
   state.selectedTag = ''
 }
 
+export function initImagesData() {
+  state.imagesData = []
+}
 export function incrementPageState() {
   state.currentPage += 1
 }

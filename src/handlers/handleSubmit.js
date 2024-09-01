@@ -1,9 +1,10 @@
 import {
+  initImagesData,
   initPageState,
   updateCurrentQueryState,
   updateSelectedTagState,
 } from '../state.js'
-import { handleSearch } from './searchHandlers.js'
+import { handleSearch } from './handleSearch.js'
 
 function handleSubmit(e) {
   e.preventDefault()
@@ -19,6 +20,8 @@ function handleSubmit(e) {
     updateSelectedTagState(selectedTag)
 
     initPageState()
+    initImagesData()
+
     handleSearch()
 
     searchInput.value = ''
