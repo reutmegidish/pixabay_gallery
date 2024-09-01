@@ -18,8 +18,11 @@
   </head>
   <body>
     <header class="header flex culomn">
-      <div>
+      <div class="flex space-between">
         <img src="./assets/images/logo.png" alt="logo" class="logo" />
+        <button id="favorites-button" class="favorites-button">
+          <i class="fas fa-heart"></i> Favorites
+        </button>
       </div>
 
       <section class="search-section flex culomn align-center justify-center">
@@ -38,6 +41,10 @@
     </header>
 
     <main class="main-container flex culomn justify-center">
+      <div class="results-heading-container">
+        <h2 id="results-heading" class="results-heading"></h2>
+      </div>
+
       <section class="cards-container"></section>
       <button class="hidden more-img-btn">More Images</button>
     </main>

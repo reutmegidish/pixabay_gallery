@@ -2,10 +2,20 @@ import handleModal from '../../handlers/handleModal.js'
 import { getPageState, state } from '../../state.js'
 import generateImgCardUI from './generateImgCardUI.js'
 import handleMoreImages from '../../handlers/handleMoreImages.js'
-function createImageCard(images) {
+import handleAddToFavorite from '../../handlers/handleAddToFavorite.js'
+
+function createImageCard(
+  images = state.imagesData,
+  headingText = 'Search Results'
+) {
   const page = getPageState()
   const imagesContainer = document.querySelector('.cards-container')
   const moreImgBtn = document.querySelector('.more-img-btn')
+  const resultsHeading = document.getElementById('results-heading')
+
+  resultsHeading.textContent = state.currentQuery
+    ? `${headingText} for '${state.currentQuery}'`
+    : headingText
 
   if (images.length === 0) {
     if (page === 1) {
@@ -35,6 +45,10 @@ function createImageCard(images) {
   moreImgBtn.addEventListener('click', handleMoreImages)
 
   handleModal(images)
+
+  document.querySelectorAll('.favorite-btn').forEach((button) => {
+    button.addEventListener('click', (e) => handleAddToFavorite(e, images))
+  })
 }
 
 export default createImageCard
